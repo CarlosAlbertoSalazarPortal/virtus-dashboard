@@ -240,7 +240,7 @@ def demo_data():
     rows = []
     start = pd.Timestamp.today().normalize() - pd.Timedelta(days=29)
     for i in range(420):
-        gross = float(rng.normal(31, 13).clip(8, 95))
+        gross = float(np.clip(rng.normal(31, 13), 8, 95))
         platform = rng.choice(platforms, p=[.42, .38, .20])
         commission_rate = {"Uber Eats": .27, "DoorDash": .24, "Grubhub": .30}[platform]
         promo = gross * rng.choice([0, .05, .10, .15, .20], p=[.58,.14,.12,.10,.06])
