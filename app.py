@@ -8,6 +8,7 @@ import plotly.express as px
 import streamlit as st
 
 st.set_page_config(page_title="Virtus | Delivery Financial Intelligence", page_icon="V", layout="wide")
+st.success("App loaded successfully.")
 
 CSS = """
 <style>
